@@ -45,14 +45,14 @@ public class assg10B {
 
         Runnable add = new Runnable(){ //this will do the same as implements Runnable
             public void run(){
-                ob.increase();
+                ob.add();
             }
         }; //making runnable object to run it in thread
         Thread thread1 = new Thread(add);
 
         Runnable increase = new Runnable(){ //this will do the same as implements Runnable
             public void run(){
-                ob.add();
+                ob.increase();
             }
         }; //making runnable object to run it in thread
         Thread thread2 = new Thread(increase);

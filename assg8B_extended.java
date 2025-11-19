@@ -27,7 +27,7 @@ class hex_ex extends Number_ex{
         while(temp_frac > 0){
             temp_frac *= 16; //multiplying with 16
             digit = (int)temp_frac; // storing the integer part after multipying
-            FractionHex = hexDigits.charAt(digit) + FractionHex;
+            FractionHex += hexDigits.charAt(digit);
             temp_frac -= digit;
         }
         System.out.println("result = " + IntegerHex + "." + FractionHex);
@@ -59,7 +59,7 @@ class octa_ex extends Number_ex{
         while(temp_frac > 0){
             temp_frac *= 8; //multiplying with 8
             digit = (int)temp_frac; // storing the integer part after multipying
-            FractionOcta = octaDigits.charAt(digit) + FractionOcta;
+            FractionOcta += octaDigits.charAt(digit);
             temp_frac -= digit;
         }
         System.out.println("result = " + IntegerOcta + "." + FractionOcta);
@@ -69,7 +69,7 @@ class octa_ex extends Number_ex{
 public class assg8B_extended {
     public static void main(String[] args) {
         hex_ex hex = new hex_ex();
-        hex.displayNum(10.5f);
+        hex.displayNum(97.01f);
         hex.displayNum(47.25f);
         hex.displayNum(255.9375f);
 
